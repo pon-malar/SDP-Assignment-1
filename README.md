@@ -60,4 +60,4 @@ This project demonstrates the practical use of HTML, CSS, and JavaScript to crea
 It is suitable for academic assignments and beginner-level web development practice.
 
 
-## 📁 Project Structure
+
