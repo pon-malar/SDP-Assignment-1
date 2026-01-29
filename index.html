@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('todo')">Add Tasks</button>
+        <button onclick="showPage('completed')">Completed</button>
+        <button onclick="showPage('focus')">Daily Focus</button>
+        <button onclick="showPage('stats')">Statistics</button>
+        <button onclick="showPage('notes')">Notes</button>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home" class="page">
+        <h1>Welcome to Task Manager</h1>
+        <p>
+            Task Manager is a simple and elegant web application designed
+            to help you manage your daily activities efficiently.
+        </p>
+        <p>
+            Organize your tasks, track completed work, stay focused,
+            and write reminders all in one calm workspace.
+        </p>
+        <img src="image1.jpeg" alt="Task Manager Image">
+    </section>
+
+    <!-- Add Tasks -->
+    <section id="todo" class="page hidden">
+        <h2>Add Your Tasks</h2>
+
+        <form onsubmit="addTask(event)">
+            <input type="text" id="taskInput" placeholder="Enter a new task" required>
+            <br><br>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Completed Tasks -->
+    <section id="completed" class="page hidden">
+        <h2>Completed Tasks</h2>
+        <p>Well done! Keep up the progress.</p>
+        <ul id="completedList"></ul>
+    </section>
+
+    <!-- Daily Focus -->
+    <section id="focus" class="page hidden">
+        <h2>Daily Focus</h2>
+        <p>Simple habits to improve productivity:</p>
+
+        <ul>
+            <li>✔ Start the day with a plan</li>
+            <li>✔ Focus on one task at a time</li>
+            <li>✔ Avoid distractions</li>
+            <li>✔ Take short breaks</li>
+        </ul>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats" class="page hidden">
+        <h2>Task Statistics</h2>
+        <p>Total Tasks Added: <strong id="totalTasks">0</strong></p>
+        <p>Tasks Completed: <strong id="completedTasks">0</strong></p>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes" class="page hidden">
+        <h2>Notes & Reminders</h2>
+        <p>Write quick notes or reminders for yourself.</p>
+
+        <textarea id="noteInput" rows="5" placeholder="Write your note here..."></textarea>
+        <br><br>
+        <button onclick="saveNote()">Save Note</button>
+
+        <p id="savedNote"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
